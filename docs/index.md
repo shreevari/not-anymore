@@ -2,122 +2,38 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+### About
+This is browser plug-in that filters out most important clauses from any list of Terms & Conditions(T&Cs) and also summarizes and visualizes results.
 
-[Link to another page](./another-page.html).
+### Aim
+- It aims to empower web users to make informed decisions online by knowing the tradeoffs mentioned in the Terms of Service.
+- The main objective is to eduate the users about what bounds they have agreed to abide by and how their data is being managed by a service.
 
-There should be whitespace between paragraphs.
+### How does it work?
+#### Scraping Terms & Conditions / Terms of Service document : 
+- JavaScript and Python are used to scrape the docuement from the website.
+#### Filtering Important Terms : 
+##### Dataset creation
+- The dataset is created with contribution from the community via a website (inspired by the [Common Voice](https://voice.mozilla.org/) project)
+- The dataset is compiled to a suitable format for use by anyone.
+- This dataset will be open source too.
+##### Machine Learning model - Training
+- A Machine Learning model is trained with a suitable data-set built by the community.
+- Bigger and more relevant the data-set, better the Classifier.
+- More training = Accurate filtering.
+##### Filtering
+- User clicks on the extension icon
+- Extension scrapes out the T&C document and feeds it to the trained model.
+- The Classifier system picks out a few clauses that require the user's attention the most.
+- The resulting few important clauses are displayed in a pop-up.
+#### Summarizing :
+##### Natural Language processing engine
+- An NLP engine is trained with the help of existing datasets.
+- The engine then summarizes the sections under the document.
+- The Summarized content is made available in the form of an API.
+##### Visualization
+- The summarized data is visualized with the help of flow diagrams and associativity diagrams.
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+### What browsers will it be available for
+- Currently, it will be developed as a firefox add-on.
+- Chrome extension to follow quickly as we plan to use the WebExtensions standard.
