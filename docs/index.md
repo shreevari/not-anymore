@@ -9,6 +9,8 @@ This is browser plug-in that filters out most important clauses from any list of
 - It aims to empower web users to make informed decisions online by knowing the tradeoffs mentioned in the Terms of Service.
 - The main objective is to eduate the users about what bounds they have agreed to abide by and how their data is being managed by a service.
 
+### Want to contribute?
+Check out [how](./codetribute.md) your can contribute.
 ### How does it work?
 #### Scraping Terms & Conditions / Terms of Service document : 
 - JavaScript and Python are used to scrape the docuement from the website.
